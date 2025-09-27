@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { MapPinIcon, BatteryIcon, CogIcon } from '@heroicons/react/24/outline'
+import { MapPinIcon, RectangleStackIcon, CogIcon } from '@heroicons/react/24/outline'
 import { SystemConfiguration, UserAppliance } from '@/types'
 import { createSolarCalculator } from '@/lib/calculator'
 
@@ -188,7 +188,7 @@ export function SystemConfigurationStep({
         {/* Battery Type */}
         <div className="card">
           <div className="card-header flex items-center">
-            <BatteryIcon className="w-5 h-5 text-gray-600 mr-2" />
+            <RectangleStackIcon className="w-5 h-5 text-gray-600 mr-2" />
             <h3 className="font-semibold text-gray-900">Battery Technology</h3>
           </div>
           <div className="card-body space-y-3">

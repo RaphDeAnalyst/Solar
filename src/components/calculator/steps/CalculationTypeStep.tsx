@@ -1,6 +1,6 @@
 'use client'
 
-import { CpuChipIcon, BatteryIcon } from '@heroicons/react/24/outline'
+import { CpuChipIcon, RectangleStackIcon } from '@heroicons/react/24/outline'
 
 interface CalculationTypeStepProps {
   value: 'full_system' | 'solar_generator'
@@ -27,7 +27,7 @@ export function CalculationTypeStep({ value, onChange, onNext }: CalculationType
       id: 'solar_generator',
       title: 'Solar Generator',
       description: 'Find portable solar generators that match your power needs - plug and play solutions',
-      icon: BatteryIcon,
+      icon: RectangleStackIcon,
       features: [
         'Portable and ready-to-use',
         'No installation required',

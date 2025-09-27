@@ -1,10 +1,10 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { 
-  SunIcon, 
-  BoltIcon, 
-  BatteryIcon, 
+import {
+  SunIcon,
+  BoltIcon,
+  RectangleStackIcon,
   CpuChipIcon,
   ShareIcon,
   DocumentArrowDownIcon,
@@ -126,7 +126,7 @@ Can you help me with a detailed quote?`
               <p className="text-sm text-gray-600">Inverter</p>
             </div>
             <div className="space-y-2">
-              <BatteryIcon className="w-8 h-8 text-orange-500 mx-auto" />
+              <RectangleStackIcon className="w-8 h-8 text-orange-500 mx-auto" />
               <p className="text-2xl font-bold text-orange-600">
                 {results.battery_count}x{results.battery_ah}Ah
               </p>
