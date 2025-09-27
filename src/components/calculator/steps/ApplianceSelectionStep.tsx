@@ -46,6 +46,8 @@ export function ApplianceSelectionStep({
     }
 
     setSelectedAppliances(prev => [...prev, newAppliance])
+    // Automatically show the newly added appliance in editing mode
+    setEditingId(newAppliance.id)
   }
 
   const updateAppliance = (id: string, updates: Partial<UserAppliance>) => {
@@ -83,6 +85,8 @@ export function ApplianceSelectionStep({
     setSelectedAppliances(prev => [...prev, newAppliance])
     setCustomAppliance({ name: '', watts: '', hours: '', quantity: '1' })
     setShowCustomForm(false)
+    // Automatically show the newly added custom appliance in editing mode
+    setEditingId(newAppliance.id)
   }
 
   const getTotalDailyConsumption = () => {
@@ -176,13 +180,16 @@ export function ApplianceSelectionStep({
         {/* Selected Appliances */}
         <div className="space-y-4">
           <h3 className="text-lg font-semibold text-gray-900">Selected Appliances</h3>
+          <p className="text-sm text-gray-600">
+            Devices will automatically open for editing when selected. Customize usage hours and quantity as needed.
+          </p>
           
           {selectedAppliances.length === 0 ? (
             <div className="card">
               <div className="card-body text-center py-8">
                 <p className="text-gray-500">No appliances selected yet</p>
                 <p className="text-sm text-gray-400 mt-1">
-                  Choose appliances from the categories on the left
+                  Choose appliances from the categories on the left - they'll open automatically for customization
                 </p>
               </div>
             </div>
